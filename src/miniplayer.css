@@ -1,0 +1,102 @@
+.miniPlayer {
+	height: 68px;
+	width: 200px;
+	background: #fff;
+	box-shadow: 0px 0px 10px #0000005c;
+	border-radius: 60px;
+	overflow: hidden;
+	padding: 18px 29px;
+	box-sizing: border-box;
+}
+
+.miniPlayer .mp_wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.miniPlayer .info {
+	height: 25px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	transform: translateY(0);
+	transition: transform 0.4s;
+}
+
+.miniPlayer h2,
+.miniPlayer h3 {
+	font-family: Helvetica, sans-serif;
+	font-size: 17px;
+	display: block;
+	color: #404040;
+	font-weight: normal;
+	line-height: 1;
+	height: 13px;
+	margin: 0;
+	margin-top: -2px;
+}
+
+.miniPlayer h3 {
+	font-size: 10px;
+	color: #9d9d9d;
+	height: 7px;
+	margin-top: 4px;
+}
+
+.miniPlayer .progress {
+	background: rgb(0,159,154);
+	background: linear-gradient(90deg, rgba(0,159,154,1) 0%, rgba(0,62,141,1) 100%);
+	height: 0px;
+	width: 112px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	transition: height 0.4s;
+}
+
+.miniPlayer .progress > b,
+.miniPlayer .progress > i {
+	display: block;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	background: #fff;
+	opacity: 0.67;
+	transition: width 0.1s;
+}
+
+.miniPlayer .progress > i {
+	display: none;
+	width: 0;
+	transition: width 0s;
+}
+
+.miniPlayer .progress:hover > b {
+	display: none;
+}
+
+.miniPlayer .progress:hover > i {
+	display: block;
+}
+
+.miniPlayer .play_pause {
+	width: 15px;
+	height: 15px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+.miniPlayer.showing_bar .info {
+	transform: translateY(-3.5px);
+}
+
+.miniPlayer.showing_bar .progress {
+	height: 2px;
+}

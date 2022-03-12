@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MiniPlayer demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/miniplayer.js"></script>
+	<link rel="stylesheet" type="text/css" href="../src/miniplayer.css">
+</head>
+<body>
+	<div id="play_box" style="margin: auto;"></div>
+	<script type="text/javascript">
+
+		var song = {
+			name: 'Hey',
+			author: 'Bensound',
+			audio: [{
+				src: 'bensound-hey.mp3',
+				type: 'audio/mpeg'
+			}]
+		};
+
+		$("#play_box").miniPlayer(song)
+
+	</script>
+</body>
+</html>
